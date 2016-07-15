@@ -1,6 +1,6 @@
 # hb-geoxml
 GeoXML XSD with scalaxb procedure to generate XML data-binding for Scala
-* [[http://scalaxb.org/]]
+* [[http://scalaxb.org/
 
 # Usage
 *`sbt` command can be replaced by `activator` `act` or whatever your aliases and sbt build tool is named. From now on `sbt` is used.*
