@@ -418,7 +418,7 @@
                 ><![CDATA[La coordonnée GPS Y du point]]></xs:documentation>
             </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="ZG" default="0" type="xs:double" use="optional">
+        <xs:attribute name="ZG" type="xs:double" use="optional">
             <xs:annotation>
                 <xs:documentation xml:lang="fr"
                 ><![CDATA[La coordonnée GPS Z optionnelle du point]]></xs:documentation>
@@ -529,12 +529,14 @@
                 ><![CDATA[Le GROUPE de l'objet référencé]]></xs:documentation>
             </xs:annotation>
         </xs:attribute>
+        <!-- Current usage is "screen click or duplicates FUNCTION info." 
         <xs:attribute name="REMARQUE" type="xs:string">
             <xs:annotation>
                 <xs:documentation xml:lang="fr"><![CDATA[Champ laissé libre pour inscription de
                     remarques de l'utilisateur]]></xs:documentation>
             </xs:annotation>
         </xs:attribute>
+         -->
     </xs:attributeGroup>
     <!-- PASSAGE -->
     <xs:element name="PASSAGE">

@@ -26,7 +26,7 @@ lazy val root = (project in file(".")).
     dispatchVersion in (Compile, scalaxb) := dispatchV,
     async in (Compile, scalaxb)           := true,
 
-    contentsSizeLimit in (Compile, scalaxb) := 20, // Can be removed with Scala 2.11.x
+    contentsSizeLimit in (Compile, scalaxb) := 22, // Can be removed with Scala 2.11.x
     namedAttributes in (Compile, scalaxb) := true, // Can be removed with Scala 2.11.x
 
     packageName in (Compile, scalaxb)     := "ch.bsisa.hyperbird.model",
