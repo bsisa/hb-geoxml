@@ -406,6 +406,24 @@
                 ><![CDATA[La coordonnée Z optionnelle du point]]></xs:documentation>
             </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="XG" type="xs:double" use="optional">
+            <xs:annotation>
+                <xs:documentation xml:lang="fr"
+                ><![CDATA[La coordonnée GPS X du point]]></xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="YG" type="xs:double" use="optional">
+            <xs:annotation>
+                <xs:documentation xml:lang="fr"
+                ><![CDATA[La coordonnée GPS Y du point]]></xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="ZG" default="0" type="xs:double" use="optional">
+            <xs:annotation>
+                <xs:documentation xml:lang="fr"
+                ><![CDATA[La coordonnée GPS Z optionnelle du point]]></xs:documentation>
+            </xs:annotation>
+        </xs:attribute>        
         <xs:attribute name="KSI" default="0" use="optional">
             <xs:annotation>
                 <xs:documentation xml:lang="fr"><![CDATA[Le KSI du point utilisé dans les calculs
@@ -434,19 +452,19 @@
         <xs:attribute name="XS" type="xs:double" use="optional">
             <xs:annotation>
                 <xs:documentation xml:lang="fr"
-                ><![CDATA[La coordonnée X du point]]></xs:documentation>
+                ><![CDATA[La coordonnée schématique X du point]]></xs:documentation>
             </xs:annotation>
         </xs:attribute>
         <xs:attribute name="YS" type="xs:double" use="optional">
             <xs:annotation>
                 <xs:documentation xml:lang="fr"
-                ><![CDATA[La coordonnée Y du point]]></xs:documentation>
+                ><![CDATA[La coordonnée schématique Y du point]]></xs:documentation>
             </xs:annotation>
         </xs:attribute>
         <xs:attribute name="ZS" default="0" type="xs:double" use="optional">
             <xs:annotation>
                 <xs:documentation xml:lang="fr"
-                ><![CDATA[La coordonnée Z optionnelle du point]]></xs:documentation>
+                ><![CDATA[La coordonnée schématique Z optionnelle du point]]></xs:documentation>
             </xs:annotation>
         </xs:attribute>
         <xs:attribute name="KSIS" default="0" use="optional">
