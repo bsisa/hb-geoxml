@@ -53,6 +53,7 @@
                 <xs:element ref="MUTATIONS" minOccurs="0" maxOccurs="1"></xs:element>
                 <xs:element ref="GEOSELECTION" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="IDENTIFIANT" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="FILIATION" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="CARACTERISTIQUE" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="PARTENAIRE" minOccurs="0" maxOccurs="1"/>
                 <xs:element ref="ACTIVITE" minOccurs="0" maxOccurs="1"/>
@@ -246,6 +247,89 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    <!-- FILIATION -->
+    <xs:element name="FILIATION">
+        <xs:annotation>
+            <xs:documentation xml:lang="fr"><![CDATA[L'element optionel FILIATION (RELATION) contient une liste de 1 à n PARENT au sens large (ELFIN) qui représente les relations de cet ELFIN avec d'autres ELFIN]]></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="PARENT" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>  
+    
+    <!-- PARENT -->
+    <xs:element name="PARENT">
+        <xs:annotation>
+            <xs:documentation xml:lang="fr"><![CDATA[Le PARENT représente une relation de parenté avec un autre ELFIN.]]></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attributeGroup ref="PARENT.attributeGroup"/>
+            <xs:sequence>
+                <xs:element ref="PROPRIETE" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>            
+        </xs:complexType>
+    </xs:element>
+    <!-- PARENT.attributeGroup -->
+    <xs:attributeGroup name="PARENT.attributeGroup">
+<!--         <xs:attribute name="POS" type="xs:positiveInteger" use="required"> -->
+<!--             <xs:annotation> -->
+<!--                 <xs:documentation xml:lang="fr"><![CDATA[Définition de la position du point de -->
+<!--                     passage dans la liste des points]]></xs:documentation> -->
+<!--             </xs:annotation> -->
+<!--         </xs:attribute> -->
+        <xs:attribute name="Id" type="IdRefType" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="fr"
+                ><![CDATA[L'identifiant de l'objet référencé]]></xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="ID_G" type="IdType" use="optional">
+            <xs:annotation>
+                <xs:documentation xml:lang="fr"><![CDATA[L'identifiant de la collection contenant l'objet
+                    référencé.]]></xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="CLASSE" type="xs:normalizedString" use="optional">
+            <xs:annotation>
+                <xs:documentation xml:lang="fr"
+                ><![CDATA[Nom de la classe de l'objet référencé]]></xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="REMARQUE" type="xs:string" use="optional">
+            <xs:annotation>
+                <xs:documentation xml:lang="fr"
+                ><![CDATA[Champ laissé libre pour inscription de remarques.]]></xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:attributeGroup> <!--  FIN DE PARENT -->    
+
+    <!-- PROPRIETE -->
+    <xs:element name="PROPRIETE">
+        <xs:annotation>
+            <xs:documentation xml:lang="fr"><![CDATA[La PROPRIETE représente une pair clef valeur générique.]]></xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attributeGroup ref="PROPRIETE.attributeGroup"/>
+        </xs:complexType>
+    </xs:element>
+    <!-- PROPRIETE.attributeGroup -->
+    <xs:attributeGroup name="PROPRIETE.attributeGroup">
+        <xs:attribute name="CLEF" type="xs:normalizedString" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="fr"
+                ><![CDATA[Identifiant de la propriété]]></xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="VALEUR" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation xml:lang="fr"><![CDATA[Valeur de la propriété.]]></xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:attributeGroup> <!--  FIN DE PROPRIETE -->    
+    
+      
     <!-- AUTEUR -->
     <xs:element name="AUT" type="xs:normalizedString">
         <xs:annotation>
