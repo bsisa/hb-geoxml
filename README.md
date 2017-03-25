@@ -31,6 +31,8 @@ This will generate three .scala source files:
 
 ## Intellij IDEA
 
+Latest IntelliJ IDEA provides Scala support in the repository plugins
+
 Check https://github.com/mpeltonen/sbt-idea 
 
 
